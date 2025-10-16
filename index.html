@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>VLA²: Empowering Vision-Language-Action Models with an Agentic Framework for Unseen Concept Manipulation</title>
+  <meta name="description" content="VLA²: Empowering Vision-Language-Action Models with an Agentic Framework for Unseen Concept Manipulation">
+  <meta name="keywords" content="VLA²">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="VLA²: Empowering Vision-Language-Action Models with an Agentic Framework for Unseen Concept Manipulation">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VLA²: Empowering Vision-Language-Action Models with an Agentic Framework for Unseen Concept Manipulation">
+  <meta property="og:image" content="https://vla2.github.io/static/images/teaser.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1939" />
+  <meta property="og:image:height" content="772" />
+  <meta property="og:url" content="https://vla-2.github.io/" />
+  <meta property="og:description" content="VLA²: An Open-Source Vision-Language-Action Model" />
+  <meta name="twitter:title" content="VLA²: An Open-Source Vision-Language-Action Model" />
+  <meta name="twitter:description" content="VLA²: An Open-Source Vision-Language-Action Model" />
+  <meta name="twitter:image" content="https://vla-2.github.io/static/images/teaser.png" />
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">VLA²:<br><span style="font-size:2.4rem;">Empowering <u>V</u>ision-<u>L</u>anguage-<u>A</u>ction Models with an <u>A</u>gentic Framework for Unseen Concept Manipulation</span></h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://h-zhao1997.github.io">Han Zhao</a><sup>*,1,2</sup>,
+              </span>
+              <span class="author-block">
+                Jiaxuan Zhang<sup>*,3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://songwxuan.github.io/">Wenxuan Song</a><sup>*,4</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                <a href="https://dingpx.github.io/">Pengxiang Ding</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                Donglin Wang<sup>2</sup>,
+              </span>
+            </div>
+
+            
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup><font size="-0.4">*</sup>Equal contribution</font></span><br>
+              <span class="author-block"><sup>1</sup>Zhejiang University,</span>
+              <span class="author-block"><sup>2</sup>Westlake University,</span>
+              <span class="author-block"><sup>3</sup>Southern University of Science and Technology,</span>
+              <span class="author-block"><sup>4</sup>Hong Kong University of Science and Technology (Guangzhou),</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://vla-2.github.io"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://vla-2.github.io"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- Model Link. -->
+                <span class="link-block">
+                  <a href="https://vla-2.github.io"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/hf_icon.svg" />
+                    </span>
+                    <span>Models (Coming Soon)</span>
+                  </a>
+                </span>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero teaser teaser-video">
+    <div class="container is-max-desktop has-text-centered">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline width="80%">
+          <source src="static/videos/openvla_teaser_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src=""
+                type="video/mp4">
+      </video> -->
+
+        
+        <h2 class="subtitle has-text-centered">
+            We introduce Vision-Language-Action Agent (VLA²), a novel integrated system-level framework designed to increase 
+            the capabilities of VLA systems by supporting the invocation of diverse tools, thereby extending the executive limits of the current VLA models.
+        </h2>
+
+        <img src="static/images/hard_sr_comparison.png" />
+        <p class="image-caption">Evaluation result on our custom Hard-level benchmark involving unseen concepts (i.e., object textures and language descriptions outside the dataset)</p>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve has-text-centered">
+            <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/bridge_pick_clutter_2.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Bridge Put Corn on Plate</p>
+          </div>
+          <div class="item item-steve has-text-centered">
+            <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/rt1_robot_coke_upright.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Google Place Coke Upright</p>
+          </div>
+          <div class="item item-chair-tp has-text-centered">
+            <video poster="" id="chair-tp video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/franka_pour_corn.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Franka Pour Corn in Pot (4x)</p>
+          </div>
+          <div class="item item-chair-tp has-text-centered">
+            <video poster="" id="chair-tp video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/wipe_ood_4x.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Franka Wipe Table (4x)</p>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/bridge_pick_clutter.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Bridge Put Eggplant in Bowl</p>
+          </div>
+          <div class="item item-shiba has-text-centered">
+            <video poster="" id="shiba video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/franka_cover.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Franka Cover Pink Bowl (4x)</p>
+          </div>
+          <div class="item item-steve has-text-centered">
+            <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/rt1_robot_orange_near_coke.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Google Move Orange near Coke</p>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/wipe_ood_2_4x.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Franka Wipe Table (4x)</p>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/bridge_stack.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Bridge Stack Cups (2x)</p>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/franka_flip_pot.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Franka Flip Pot (4x)</p>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/carousel/franka_knock.mp4" type="video/mp4">
+            </video>
+            <p id="overlay">Franka Knock over Yellow Pony (2x)</p>
+          </div>
+        </div>
+        <br>
+        <p class="has-text-centered">WidowX & Google robot videos show real <b>"zero-shot"</b> rollouts with the OpenVLA model<br>Franka Panda robot videos depict <b>fine-tuned</b> OpenVLA policies</p>
+      </div>
+    </div>
+  </section> -->
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">The VLA² Framework</h2>
+          <div class="content has-text-justified has-text-centered">
+            <img src="static/images/overall.png" />
+            <p>
+              VLA² integerate these modules to enhance the ability of VLA: Task Planning, Web/Memory Retrival, Object Grounding, Result Verification. 
+              Each module implements its function through one or more foundation models.
+            </p>
+
+            <h3 class="title is-4">OOD Information Processing</h3>
+            <p>
+              The figures below illustrates the process of how VLA² handles a task that has an unseen concept (Put the blue and white porcelain bowl on the stove) in the observation.
+            </p>
+            <h4 class="title is-5">Vision Processing</h4>
+            <img src="static/images/vision_processing.png" />
+            <h4 class="title is-5">Language Processing</h4>
+            <img src="static/images/language_processing.png" />
+
+            <p>
+              Once information is retrieved at the beginning of a task, the processed information can be stored in memory for later use.
+            </p>
+
+            <h3 class="title is-4">Mask-Conditioned VLA</h3>
+            We processed the target objects and placement locations specified in the task descriptions by applying colored masks, 
+            and fine-tuned <a href="https://openvla.github.io">OpenVLA</a> to work with this modified input. This use of colored masks serves as a bridge between upstream 
+            unseen concept recognition and downstream task execution by the VLA.
+            <!-- <h3 class="title is-4">Metrics for Real-to-Sim Evaluation</h3>
+            <img src="static/images/metrics.png" />
+            <p>
+              An effective & useful simulation-based evaluation should demonstrate <strong>good correlations in policy ranking & performance</strong> with real evaluations.
+            </p>
+            <p>
+              To measure such correlations, one can apply the traditional <strong>Pearson correlation metric ("r")</strong>, but it has the following limitations: (1) Pearson correlation only assess 
+              the linear fit between real-and-sim performances, while for simulated evaluation we don't necessarily need linear correlations,
+              as long as sim eval reflects real-world performance improvements between different policies (middle-right); (2) Pearson correlation does not reflect the range of values it is computed over.
+              For policy sets that perform closely in real (far-right), Pearson r may change drastically based on small real-world performance differences, 
+              which can often be attributed to the inherent noise in real-world evaluations.
+            </p>
+            <p>             
+              Thus, we introduce the <strong>Mean Maximum Rank Violation (MMRV)</strong> metric (lower the better)
+              to better assess the real-and-sim policy ranking consistency.
+              The key underlying quantity is the rank violation between two policies, which weighs the significance of the
+              simulator incorrectly ranking the policies by the corresponding margin in real-world performance.
+              MMRV then aggregates the N^2 rank violations by averaging the worst-case rank violation for each policy.
+            </p>
+            <h3 class="title is-4">Visual Matching Mitigates the Real-to-Sim Visual Gap</h3>
+            <img src="static/images/visual_matching.png" style="width: 70%; height: auto; display: block; margin: 0 auto;"/>
+            <p>
+              Visual discrepancies between real-world and simulated environments can comprise a distribution shift that adversely
+              affects a learned policy’s behavior, rendering simulated evaluation unreliable. Our goal is to match the simulator
+              visuals to those of the real-world environment with only a modest amount of manual effort. Our proposed Visual Matching
+              consists of (1) <strong>green screening</strong>, i.e. segmenting out interactive simulated assets and overlaying them onto real-world
+              backgrounds; and (2) <strong>texture matching</strong>, which involves projecting real object textures onto simulation assets and tuning
+              robot arm colors using real videos.
+            </p>
+            <h3 class="title is-4">System Identification Mitigates the Real-to-Sim Control Gap</h3>
+            <img src="static/images/control_gap.png" />
+            <p>
+              The goal of mitigating the control gap between simulated and real-world environments is to ensure that policy actions
+              executed in simulation yields comparable effects on the robot’s end-effector as those observed when executed on the real
+              robot. We perform system identification (SysID) for closing the control gap between real and simulated environments on a small sample of trajectories from the real world dataset.
+            </p>
+            <div class="columns is-vcentered interpolation-panel">
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/videos/sysid/real_rollout.mp4" type="video/mp4">
+                    </video>
+                    <p >Real World Rollout</p>
+                  </div>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/videos/sysid/bad_control.mp4" type="video/mp4">
+                    </video>
+                    <p >Control without SysID</p>
+                  </div>
+                  <div class="column  has-text-centered">
+                    <video autoplay controls muted loop playsinline height="100%">
+                      <source src="static/videos/sysid/good_control.mp4" type="video/mp4">
+                    </video>
+                    <p >Control with SysID</p>
+                  </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+                <h2 class="title is-3">Experiments</h2>
+
+                <h3 class="title is-4">Evaluation on Original LIBERO</h3>
+                <img src="static/images/eval_libero.png" />
+
+                <p>
+                  VLA² remains competitive with all methods using OpenVLA as their backbone (Class 2 baselines), and achieves top-tier performance on all benchmarks except for LIBERO-Object.
+                </p>
+
+                <br>
+                <h3 class="title is-4">Evaluation on Customized Environment</h3>
+                
+                <img src="static/images/env.png" />
+
+                <p>
+                  Based on the <a href="https://arxiv.org/abs/2306.03310">LIBERO</a> simulation environment, we designed object generalization 
+                  tasks across three difficulty levels, ranging from simple color variations 
+                  (Easy) and manipulation of generalized target objects (Medium) to generalization 
+                  to objects with unseen concepts (Hard).
+                </p>
+
+                
+
+                <img src="static/images/eval_libero_custom.png" />
+
+                <p>
+                  As the benchmark difficulty increases, all baselines exhibit a significant decline in task success rates, while VLA² demonstrates a clear advantage on tasks that require strong generalization capabilities.
+                </p>
+                
+                <h3 class="title is-4">Detailed Task-by-Task Success Rate on Hard Benchmark</h3>
+                <img src="static/images/eval_libero_custom_detail.png" />
+                
+                
+                
+      </section>
+
+
+      <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <!-- <pre><code>@article{kim24openvla,
+    title={OpenVLA: An Open-Source Vision-Language-Action Model},
+    author={{Moo Jin} Kim and Karl Pertsch and Siddharth Karamcheti and Ted Xiao and Ashwin Balakrishna and Suraj Nair and Rafael Rafailov and Ethan Foster and Grace Lam and Pannag Sanketi and Quan Vuong and Thomas Kollar and Benjamin Burchfiel and Russ Tedrake and Dorsa Sadigh and Sergey Levine and Percy Liang and Chelsea Finn},
+    journal = {arXiv preprint arXiv:2406.09246},
+    year={2024},
+} </code></pre> -->
+        </div>
+      </section>
+
+
+      <footer class="footer">
+        <div class="container">
+          <!-- <div class="content has-text-centered">
+            <a class="icon-link" href="https://arxiv.org/pdf/2210.05714.pdf">
+              <i class="fas fa-file-pdf"></i>
+            </a>
+            <a class="icon-link" href="" class="external-link" disabled>
+              <i class="fab fa-github"></i>
+            </a>
+          </div> -->
+          <div class="columns is-centered">
+            <div class="column is-8">
+              <div class="content">
+                <p> Website borrowed from <a href="https://github.com/openvla/openvla.github.io">OpenVLA</a> under a <a
+                    href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                    International</a>
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>
